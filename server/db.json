@@ -1,10 +1,6 @@
 {
   "heroes": [
     {
-      "id": 11,
-      "name": "Mr. Nice"
-    },
-    {
       "id": 12,
       "name": "Narco"
     },
@@ -15,6 +11,10 @@
     {
       "id": 14,
       "name": "Celeritas"
+    },
+    {
+      "name": "myhero",
+      "id": 15
     }
   ]
 }

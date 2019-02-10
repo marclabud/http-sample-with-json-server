@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
 import {RequestCache, RequestCacheWithMap} from './request-cache.service';
-
+import {LoggerModule, NgxLoggerLevel} from 'ngx-logger';
 import {AppComponent} from './app.component';
 import {AuthService} from './auth.service';
 import {ConfigComponent} from './config/config.component';
@@ -26,6 +26,7 @@ import {httpInterceptorProviders} from './http-interceptors';
       cookieName: 'My-Xsrf-Cookie',
       headerName: 'My-Xsrf-Header',
     }),
+    LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG}),
   ],
   declarations: [
     AppComponent,

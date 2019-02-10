@@ -8,6 +8,7 @@ import { catchError } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
+import {NGXLogger} from 'ngx-logger';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -22,8 +23,9 @@ export class HeroesService {
   private handleError: HandleError;
 
   constructor(
-    private http: HttpClient,
-    httpErrorHandler: HttpErrorHandler) {
+      private http: HttpClient,
+      private logger: NGXLogger,
+      httpErrorHandler: HttpErrorHandler) {
     this.handleError = httpErrorHandler.createHandleError('HeroesService');
   }
 
